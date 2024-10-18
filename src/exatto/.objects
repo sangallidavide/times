@@ -14,6 +14,7 @@ mod_RT_control.o \
 mod_RT_operations.o \
 mod_plasma.o \
 mod_RT_interpolate_tools.o \
+SET_RT_defaults.o \
 WF_derivative.o \
 RT_INTERPOLATION_driver_seed.o \
 RT_alloc.o \

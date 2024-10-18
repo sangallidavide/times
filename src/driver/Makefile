@@ -9,6 +9,8 @@ include $(REF_YDIR)/config/mk/local/static_variables.mk
 # redefines $(libs) and defines $(extlibs) $(exatto_libdir) $(lf90include) $(lf90libinclude)
 include ../../config/static_vars.inc
 
+dopts  = -D_RT -D_yambo $(precomp_flags)
+
 include ../../config/rules.inc
 include ./.objects
 

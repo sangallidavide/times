@@ -15,9 +15,9 @@ include ../../config/rules.inc
 include ./.objects
 
 srcdir=../../
-folder="src/io"
+folder="src/rtinterface"
 
-target=lib_io.a
+target=lib_rtinterface.a
 
 all: $(target)
 
@@ -30,4 +30,4 @@ $(target): $(objs)
 clean:
 	-rm -rf *.f90 *.x *.o *.mod *.MOD *.a
 
-include ./make.deps
+#include ./make.deps

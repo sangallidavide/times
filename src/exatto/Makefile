@@ -9,8 +9,10 @@ include $(REF_YDIR)/config/mk/local/static_variables.mk
 # redefines $(libs) and defines $(extlibs) $(exatto_libdir) $(lf90include) $(lf90libinclude)
 include ../../config/static_vars.inc
 
-exatto_libs=-L$(exatto_libdir) -l_collisions -l_hamiltonian -l_io
+exatto_libs=-L$(exatto_libdir) -l_collisions -l_hamiltonian -l_io # -l_rtinterface
 exatto_ldrv=-L$(exatto_libdir) -l_driver
+
+dopts  = -D_RT -D_yambo $(precomp_flags)
 
 include ../../config/rules.inc
 include ./.objects

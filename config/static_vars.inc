@@ -4,7 +4,6 @@ libs=-L$(compdir)/lib -lpol_function -ldipoles -lbse -lacfdt -lqp -lpol_function
 extlibs=-L$(compdir)/lib -lqe_pseudo -lmath77 -lslatec -llocal $(lslepc) $(lpetsc) $(lscalapack) $(lblacs) $(llapack) $(lblas) $(liotk) $(letsf) $(lnetcdff) $(lnetcdf) $(lhdf5) $(llibxc) $(lfft) $(lfutile) $(lyaml) -lm
 
 #precomp_flags  = -D_RT -D_HDF5_LIB -D_HDF5_IO -D_PAR_IO -D_MPI -D_FFTW -D_SLEPC -D_SCALAPACK -D_OPENMP -D_TIMING -D_$(os)
-dopts  = -D_RT -D_yambo $(precomp_flags)
 
 IFLAG=-I
 

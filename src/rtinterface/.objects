@@ -1,0 +1,10 @@
+objs = \
+INIT_RT.o \
+INIT_RT_activate.o \
+INIT_RT_check_databases.o \
+INIT_RT_fields.o \
+INIT_RT_load.o \
+INIT_RT_read_command_line.o \
+INIT_RT_ctl_load.o \
+INIT_RT_ctl_switch.o \
+INIT_RT_DephMatrix.o 

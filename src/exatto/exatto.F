@@ -55,19 +55,20 @@ integer function yambo(np,pid,lnstr,iinf,iind,iod,icd,ijs,instr,inf,ind,od,com_d
  !
  ! Externals
  !
- integer, external ::X_dielectric_matrix,INIT
+ integer, external ::X_dielectric_matrix,INIT!,INIT_RT
  !
  ! Presets
  !
  ncpu    = np
  myid    = pid
  infile  = inf
- yambo  = 0
+ yambo   = 0
  iinf    = 0 
  !
  ! ... Internal Defaults
  !
  call SET_defaults(instr,ind,od,com_dir)
+ call SET_RT_defaults(instr,ind,od,com_dir)
  !
  ! ... C_driver -> YPP information transfer
  !
@@ -90,6 +91,7 @@ integer function yambo(np,pid,lnstr,iinf,iind,iod,icd,ijs,instr,inf,ind,od,com_d
  !====================
  !
  iinf=INIT(en,q,k,X,Xw,Dip,instr,lnstr,.false.,.false.)
+ !iinf=iinf+INIT_RT(en,q,k,X,Xw,Dip,instr,lnstr,.false.,.false.)
  !
  ! iinf=0 => No error message from driver.c 
  !
@@ -113,6 +115,7 @@ integer function yambo(np,pid,lnstr,iinf,iind,iod,icd,ijs,instr,inf,ind,od,com_d
  ! Update the default variables
  !
  i_err=INIT(en,q,k,X,Xw,Dip,instr,lnstr,.true.,.false.)
+ !i_err=INIT_RT(en,q,k,X,Xw,Dip,instr,lnstr,.true.,.false.)
  !
  ! BZ sampling
  !==============
@@ -269,6 +272,7 @@ integer function yambo(np,pid,lnstr,iinf,iind,iod,icd,ijs,instr,inf,ind,od,com_d
  call CLOSE_the_run(.TRUE.,.TRUE.,.FALSE.)
  !
  i_err=INIT(en,q,k,X,Xw,Dip,instr,lnstr,.false.,.true.)
+ !i_err=INIT_RT(en,q,k,X,Xw,Dip,instr,lnstr,.false.,.true.)
  !
  call it_reset(-1)
  !

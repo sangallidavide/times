@@ -21,6 +21,7 @@ exatto:
 	+$(MAKE) -C src/collisions
 	+$(MAKE) -C src/hamiltonian
 	+$(MAKE) -C src/io
+	#+$(MAKE) -C src/rtinterface
 	+$(MAKE) -C src/driver
 	+$(MAKE) -C src/exatto
 	cd src/exatto ; make exatto.x
@@ -41,6 +42,7 @@ clean:
 	cd src/collisions   ; make clean
 	cd src/hamiltonian  ; make clean
 	cd src/io           ; make clean
+	#cd src/rtinterface  ; make clean
 	cd src/driver       ; make clean
 	#cd src/lumen        ; make clean
 	#cd src/floquet      ; make clean
