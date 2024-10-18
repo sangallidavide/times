@@ -1,0 +1,28 @@
+objs=\
+mod_collision_ext.o \
+mod_COLL_interfaces.o \
+COLLISIONS_compose_rt.o \
+COLLISIONS_compose_nl.o \
+COLLISIONS_basic_operations.o \
+Build_LSEX_collisions.o \
+SCATTERING_QED_transverse_matrix.o \
+SCATTERING_GW_kinematics.o \
+PLASMA_tables_and_dimensions.o \
+PLASMA_parallel_setup.o \
+PLASMA_build_up.o \
+OSCLL_load.o \
+OSCLL_eval.o \
+OSCLL_compose_vbands.o \
+OSCLL_compose_nl.o \
+OSCLL_compose_collision.o \
+LSEX_potential.o \
+COLLISIONS_NEQ_GW_static.o \
+COLLISIONS_momentum.o \
+COLLISIONS_map_to_QP_table.o \
+COLLISIONS_load.o \
+COLLISIONS_linearize_and_IO.o \
+COLLISIONS_HXC.o \
+COLLISIONS_eval.o \
+COLLISIONS_compress.o \
+COLLISIONS_compose_sc.o \
+COLLISIONS_alloc_and_free.o

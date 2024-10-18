@@ -9,7 +9,7 @@ cd ..
 TOPDIR=`pwd`
 BINDIR=$TOPDIR/config
 
-DIR_LIST="src"
+DIR_LIST="src/exatto src/collisions src/hamiltonian src/io src/floquet src/lumen"
 SPECIAL_MODULES="\
   iso_fortran_env iso_c_binding mpi \
   devxlib fft_base fft_scalar fft_ggen fft_types \

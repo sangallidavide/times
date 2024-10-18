@@ -5,8 +5,8 @@ info:
 	@echo 
 	@echo  "  Possible <target>'s are: "
 	@echo  "     all            build all executables"
-	@echo  "     exatto         EXcitons at ATTOsecond time slace"
-	@echo  "                    Propagates the one body density matrix under the action of externa fields"
+	@echo  "     exatto         EXcitons at the ATTOsecond time scale"
+	@echo  "                    Propagates the one body density matrix under the action of external fields"
 	@echo  "     lumen          Non linear optics in the time domain"
 	@echo  "                    propagates quasi-particle wavefunction with nonequilibrium Berry phase"
 	@echo  "     floquet        Nonlinear optics in frequency domain"
@@ -21,17 +21,17 @@ exatto:
 	+$(MAKE) -C src/collisions
 	+$(MAKE) -C src/hamiltonian
 	+$(MAKE) -C src/io
+	+$(MAKE) -C src/driver
 	+$(MAKE) -C src/exatto
-#	cd src/exatto ; make exatto
+	cd src/exatto ; make exatto.x
 
+# Not yet activated
 lumen:
-	+$(MAKE) -C src/common
-	+$(MAKE) -C src/lumen
-#	cd src/lumen ; make  lumen
+	cd src/lumen ; make  lumen
 
+# Not yet activated
 floquet:
-	+$(MAKE) -C src/common
-	+$(MAKE) -C src/floquet
+	cd src/floaquet ; make  floque
 
 deps:
 	if test -x ./config/makedeps.sh ; then ./config/makedeps.sh ; fi
@@ -41,8 +41,9 @@ clean:
 	cd src/collisions   ; make clean
 	cd src/hamiltonian  ; make clean
 	cd src/io           ; make clean
-	#cd src/lumen    ; make clean
-	#cd src/floquet  ; make clean
+	cd src/driver       ; make clean
+	#cd src/lumen        ; make clean
+	#cd src/floquet      ; make clean
 	-rm -rf ./bin/*.x
 	-rm -rf ./lib/*
 	-rm -rf ./include/*

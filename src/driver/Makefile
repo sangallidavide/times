@@ -9,22 +9,23 @@ include $(REF_YDIR)/config/mk/local/static_variables.mk
 # redefines $(libs) and defines $(extlibs) $(exatto_libdir) $(lf90include) $(lf90libinclude)
 include ../../config/static_vars.inc
 
-exatto_libs=-L$(exatto_libdir) -l_collisions -l_hamiltonian -l_io
-exatto_ldrv=-L$(exatto_libdir) -l_driver
-
 include ../../config/rules.inc
 include ./.objects
 
 srcdir=../../
-folder="src/exatto"
+folder="src/driver"
 
-all: exatto.x
+target=lib_driver.a
 
-exatto.x: $(objs) exatto.o
-	eval $(fc) $(fcflags) $(lf90include) $(lf90libinclude) -o $@ exatto.o $(objs) $(exatto_libs) $(libs) $(exatto_ldrv) $(extlibs)
-	cd ../../bin ; ln -sf ../src/exatto/exatto.x ./exatto.x
+all: $(target)
+
+$(target): $(objs)
+	eval $(ar) $(arflags) $(target) $(objs)
+	echo $(target)   
+	mv $(target) $(exatto_libdir) ; chmod u+x $(exatto_libdir)/$(target)
+	if test -e c_driver.mod ; then  mv *.mod $(exatto_incdir); fi
 
 clean:
 	-rm -rf *.f90 *.x *.o *.mod *.MOD *.a
 
-include ./make.deps
+#include ./make.deps

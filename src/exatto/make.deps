@@ -1,0 +1,576 @@
+# exatto.o : @dipoles@
+# exatto.o : @drivers@
+# exatto.o : @electrons@
+# exatto.o : @frequency@
+# exatto.o : @it_m@
+# exatto.o : @it_tools@
+# exatto.o : @parallel_m@
+# exatto.o : @qp_m@
+# exatto.o : @r_lattice@
+# exatto.o : @wave_func@
+# exatto.o : @x_m@
+# Fermi_fnc_fit.o : @electrons@
+# Fermi_fnc_fit.o : @functions@
+Fermi_fnc_fit.o : mod_real_time.o
+# Fermi_fnc_fit.o : @pars@
+# Fermi_fnc_fit.o : @vec_operate@
+# mod_fields.o : @pars@
+# mod_fields.o : @qp_m@
+# mod_fields.o : @stderr@
+# mod_fields.o : @units@
+# mod_plasma.o : @d_lattice@
+# mod_plasma.o : @memory@
+# mod_plasma.o : @pars@
+# mod_real_time.o : @d_lattice@
+# mod_real_time.o : @drivers@
+# mod_real_time.o : @electrons@
+# mod_real_time.o : @global_xc@
+# mod_real_time.o : @memory@
+mod_real_time.o : mod_RT_lifetimes.o
+mod_real_time.o : mod_RT_occupations.o
+# mod_real_time.o : @pars@
+# mod_real_time.o : @r_lattice@
+# mod_real_time.o : @units@
+# mod_RT_control.o : @electrons@
+# mod_RT_control.o : @memory@
+mod_RT_control.o : mod_real_time.o
+# mod_RT_control.o : @pars@
+# mod_RT_control.o : @r_lattice@
+# mod_RT_control.o : @stderr@
+# mod_RT_control.o : @units@
+# mod_RT_interpolate_tools.o : @interpolate@
+mod_RT_interpolate_tools.o : mod_real_time.o
+# mod_RT_interpolate_tools.o : @pars@
+# mod_RT_lifetimes.o : @d_lattice@
+# mod_RT_lifetimes.o : @drivers@
+# mod_RT_lifetimes.o : @memory@
+# mod_RT_lifetimes.o : @pars@
+# mod_RT_occupations.o : @drivers@
+# mod_RT_occupations.o : @memory@
+# mod_RT_occupations.o : @pars@
+# mod_RT_operations.o : @electrons@
+# mod_RT_operations.o : @fft_m@
+mod_RT_operations.o : mod_real_time.o
+mod_RT_operations.o : mod_RT_lifetimes.o
+mod_RT_operations.o : mod_RT_occupations.o
+# mod_RT_operations.o : @pars@
+# mod_RT_operations.o : @qp_m@
+# mod_RT_operations.o : @r_lattice@
+# mod_RT_operations.o : @x_m@
+# mod_RT_output.o : @descriptors@
+# mod_RT_output.o : @drivers@
+# mod_RT_output.o : @global_xc@
+# mod_RT_output.o : @memory@
+# mod_RT_output.o : @pars@
+# mod_RT_output.o : @units@
+# RT_alloc.o : @drivers@
+# RT_alloc.o : @electrons@
+# RT_alloc.o : @fft_m@
+# RT_alloc.o : @hamiltonian@
+# RT_alloc.o : @memory@
+RT_alloc.o : mod_real_time.o
+RT_alloc.o : mod_RT_lifetimes.o
+RT_alloc.o : mod_RT_occupations.o
+# RT_alloc.o : @parallel_m@
+# RT_alloc.o : @pars@
+# RT_alloc.o : @r_lattice@
+# RT_alloc.o : @xc_functionals@
+# RT_apply_field.o : @dipoles@
+# RT_apply_field.o : @d_lattice@
+# RT_apply_field.o : @drivers@
+# RT_apply_field.o : @electrons@
+RT_apply_field.o : mod_fields.o
+RT_apply_field.o : mod_real_time.o
+# RT_apply_field.o : @parallel_m@
+# RT_apply_field.o : @pars@
+# RT_apply_field.o : @units@
+# RT_apply_field.o : @vec_operate@
+# RT_apply_field.o : @x_m@
+# RT_apply.o : @com@
+# RT_apply.o : @drivers@
+# RT_apply.o : @electrons@
+# RT_apply.o : @global_xc@
+# RT_apply.o : @io_int@
+# RT_apply.o : @io_m@
+RT_apply.o : mod_real_time.o
+RT_apply.o : mod_RT_control.o
+# RT_apply.o : @pars@
+# RT_apply.o : @parser_m@
+# RT_apply.o : @r_lattice@
+# RT_apply.o : @stderr@
+# RT_apply.o : @units@
+# RT_apply_RWA.o : @electrons@
+RT_apply_RWA.o : mod_real_time.o
+# RT_apply_RWA.o : @pars@
+# RT_apply_RWA.o : @r_lattice@
+# RT_average_operator.o : @d_lattice@
+# RT_average_operator.o : @electrons@
+# RT_average_operator.o : @fft_m@
+# RT_average_operator.o : @h_interfaces@
+# RT_average_operator.o : @matrix_operate@
+RT_average_operator.o : mod_real_time.o
+# RT_average_operator.o : @parallel_int@
+# RT_average_operator.o : @parallel_m@
+# RT_average_operator.o : @pars@
+# RT_average_operator.o : @qp_m@
+# RT_average_operator.o : @r_lattice@
+# RT_average_operator.o : @timing_m@
+# RT_average_operator.o : @wave_func@
+# RT_average_operator.o : @wrapper_omp@
+RT_build_T1_and_T2.o : mod_real_time.o
+# RT_build_T1_and_T2.o : @pars@
+# RT_carriers_number.o : @electrons@
+RT_carriers_number.o : mod_real_time.o
+RT_carriers_number.o : mod_RT_control.o
+RT_carriers_number.o : mod_RT_occupations.o
+# RT_carriers_number.o : @pars@
+# RT_carriers_number.o : @r_lattice@
+# RT_carriers_object.o : @drivers@
+# RT_carriers_object.o : @electrons@
+# RT_carriers_object.o : @hamiltonian@
+# RT_carriers_object.o : @io_int@
+# RT_carriers_object.o : @io_m@
+RT_carriers_object.o : mod_real_time.o
+RT_carriers_object.o : mod_RT_control.o
+RT_carriers_object.o : mod_RT_lifetimes.o
+RT_carriers_object.o : mod_RT_occupations.o
+RT_carriers_object.o : mod_RT_operations.o
+# RT_carriers_object.o : @pars@
+# RT_carriers_object.o : @r_lattice@
+# RT_carriers_temperature.o : @drivers@
+RT_carriers_temperature.o : mod_RT_occupations.o
+# RT_carriers_temperature.o : @pars@
+# RT_carriers_temperature.o : @units@
+# RT_current_AND_polarization.o : @dipoles@
+# RT_current_AND_polarization.o : @d_lattice@
+# RT_current_AND_polarization.o : @electrons@
+RT_current_AND_polarization.o : mod_fields.o
+RT_current_AND_polarization.o : mod_real_time.o
+RT_current_AND_polarization.o : mod_RT_control.o
+RT_current_AND_polarization.o : mod_RT_operations.o
+# RT_current_AND_polarization.o : @parallel_m@
+# RT_current_AND_polarization.o : @pars@
+# RT_current_AND_polarization.o : @r_lattice@
+# RT_current_AND_polarization.o : @units@
+# RT_databases_IO.o : @electrons@
+# RT_databases_IO.o : @io_int@
+# RT_databases_IO.o : @io_m@
+RT_databases_IO.o : mod_fields.o
+RT_databases_IO.o : mod_real_time.o
+RT_databases_IO.o : mod_RT_control.o
+# RT_databases_IO.o : @parallel_int@
+# RT_databases_IO.o : @parallel_m@
+# RT_databases_IO.o : @pars@
+# RT_databases_IO.o : @timing_m@
+# RT_Dephasing_Matrix.o : @com@
+# RT_Dephasing_Matrix.o : @electrons@
+# RT_Dephasing_Matrix.o : @memory@
+RT_Dephasing_Matrix.o : mod_real_time.o
+# RT_Dephasing_Matrix.o : @pars@
+# RT_Dephasing_Matrix.o : @r_lattice@
+# RT_Dephasing_Matrix.o : @units@
+RT_Dephasing_step.o : mod_real_time.o
+# RT_Dephasing_step.o : @pars@
+# RT_do_it.o : @it_tools@
+RT_do_it.o : mod_real_time.o
+RT_do_it.o : mod_RT_control.o
+# RT_do_it.o : @parser_m@
+# RT_driver.o : @collision_ext@
+# RT_driver.o : @com@
+# RT_driver.o : @dipoles@
+# RT_driver.o : @drivers@
+# RT_driver.o : @electrons@
+# RT_driver.o : @fft_m@
+# RT_driver.o : @hamiltonian@
+# RT_driver.o : @interfaces@
+# RT_driver.o : @io_int@
+# RT_driver.o : @io_m@
+# RT_driver.o : @live_t@
+# RT_driver.o : @memory@
+RT_driver.o : mod_fields.o
+RT_driver.o : mod_plasma.o
+RT_driver.o : mod_real_time.o
+RT_driver.o : mod_RT_control.o
+RT_driver.o : mod_RT_lifetimes.o
+# RT_driver.o : @parallel_int@
+# RT_driver.o : @parallel_m@
+# RT_driver.o : @pars@
+# RT_driver.o : @qp_ctl_m@
+# RT_driver.o : @r_lattice@
+# RT_driver.o : @stderr@
+# RT_driver.o : @units@
+# RT_driver.o : @wave_func@
+# RT_driver.o : @x_m@
+RT_Dynamics_is_over.o : mod_real_time.o
+RT_Dynamics_is_over.o : mod_RT_control.o
+# RT_Dynamics_is_over.o : @pars@
+# RT_energy_components.o : @dipoles@
+# RT_energy_components.o : @drivers@
+# RT_energy_components.o : @electrons@
+# RT_energy_components.o : @fft_m@
+# RT_energy_components.o : @global_xc@
+# RT_energy_components.o : @hamiltonian@
+RT_energy_components.o : mod_real_time.o
+RT_energy_components.o : mod_RT_operations.o
+# RT_energy_components.o : @parallel_m@
+# RT_energy_components.o : @pars@
+# RT_energy_components.o : @r_lattice@
+# RT_energy_components.o : @units@
+# RT_energy_components.o : @xc_functionals@
+# RT_entropy.o : @electrons@
+RT_entropy.o : mod_real_time.o
+RT_entropy.o : mod_RT_occupations.o
+# RT_entropy.o : @parallel_m@
+# RT_entropy.o : @pars@
+# RT_entropy.o : @r_lattice@
+# RT_entropy.o : @units@
+RT_EULER_step.o : mod_real_time.o
+# RT_EULER_step.o : @pars@
+# RT_EULER_step.o : @wrapper_omp@
+RT_EXP_step_accurate.o : mod_real_time.o
+# RT_EXP_step_accurate.o : @pars@
+# RT_EXP_step_accurate.o : @wrapper_omp@
+RT_EXP_step_std.o : mod_real_time.o
+# RT_EXP_step_std.o : @pars@
+# RT_EXP_step_std.o : @wrapper_omp@
+# RT_Ext_fields.o : @functions@
+RT_Ext_fields.o : mod_fields.o
+RT_Ext_fields.o : mod_real_time.o
+# RT_Ext_fields.o : @pars@
+# RT_Ext_fields.o : @units@
+RT_Field_Commensurable_Frequencies.o : mod_fields.o
+RT_Field_Commensurable_Frequencies.o : mod_real_time.o
+# RT_Field_Commensurable_Frequencies.o : @pars@
+# RT_Field_Commensurable_Frequencies.o : @stderr@
+# RT_field_from_file.o : @com@
+RT_field_from_file.o : mod_fields.o
+RT_field_from_file.o : mod_real_time.o
+# RT_field_from_file.o : @pars@
+# RT_field_from_file.o : @stderr@
+# RT_Fluence_and_PI_kind.o : @electrons@
+RT_Fluence_and_PI_kind.o : mod_fields.o
+RT_Fluence_and_PI_kind.o : mod_real_time.o
+# RT_Fluence_and_PI_kind.o : @pars@
+# RT_Fluence_and_PI_kind.o : @parser_m@
+# RT_Fluence_and_PI_kind.o : @units@
+# RT_free.o : @dipoles@
+# RT_free.o : @hamiltonian@
+# RT_free.o : @memory@
+RT_free.o : mod_real_time.o
+RT_free.o : mod_RT_lifetimes.o
+RT_free.o : mod_RT_occupations.o
+# RT_free.o : @r_lattice@
+# RT_free.o : @xc_functionals@
+# RT_Glesser_evolve.o : @electrons@
+RT_Glesser_evolve.o : mod_real_time.o
+# RT_Glesser_evolve.o : @parallel_m@
+# RT_Glesser_evolve.o : @pars@
+# RT_Glesser_evolve.o : @r_lattice@
+RT_G_lesser_init.o : mod_real_time.o
+RT_G_lesser_init.o : mod_RT_occupations.o
+# RT_G_lesser_init.o : @parallel_m@
+# RT_G_lesser_init.o : @pars@
+# RT_G_lesser_init.o : @r_lattice@
+RT_Glesser_rotate.o : mod_real_time.o
+# RT_Glesser_rotate.o : @pars@
+# RT_Hamiltonian_diagonalize.o : @electrons@
+# RT_Hamiltonian_diagonalize.o : @hamiltonian@
+# RT_Hamiltonian_diagonalize.o : @interfaces@
+RT_Hamiltonian_diagonalize.o : mod_fields.o
+RT_Hamiltonian_diagonalize.o : mod_real_time.o
+RT_Hamiltonian_diagonalize.o : mod_RT_lifetimes.o
+# RT_Hamiltonian_diagonalize.o : @parallel_int@
+# RT_Hamiltonian_diagonalize.o : @parallel_m@
+# RT_Hamiltonian_diagonalize.o : @pars@
+# RT_Hamiltonian_diagonalize.o : @r_lattice@
+# RT_Hamiltonian_diagonalize.o : @timing_m@
+# RT_Hamiltonian_diagonalize.o : @wrapper_omp@
+# RT_Hamiltonian.o : @collision_ext@
+# RT_Hamiltonian.o : @drivers@
+# RT_Hamiltonian.o : @electrons@
+# RT_Hamiltonian.o : @fft_m@
+# RT_Hamiltonian.o : @global_xc@
+# RT_Hamiltonian.o : @hamiltonian@
+# RT_Hamiltonian.o : @h_interfaces@
+RT_Hamiltonian.o : mod_fields.o
+RT_Hamiltonian.o : mod_real_time.o
+# RT_Hamiltonian.o : @parallel_int@
+# RT_Hamiltonian.o : @parallel_m@
+# RT_Hamiltonian.o : @pars@
+# RT_Hamiltonian.o : @r_lattice@
+# RT_Hamiltonian.o : @timing_m@
+# RT_Hamiltonian.o : @wave_func@
+# RT_Hamiltonian.o : @wrapper_omp@
+# RT_Hamiltonian.o : @xc_functionals@
+# RT_initialize.o : @collision_ext@
+# RT_initialize.o : @com@
+# RT_initialize.o : @d_lattice@
+# RT_initialize.o : @drivers@
+# RT_initialize.o : @electrons@
+# RT_initialize.o : @io_m@
+# RT_initialize.o : @memory@
+RT_initialize.o : mod_fields.o
+RT_initialize.o : mod_plasma.o
+RT_initialize.o : mod_real_time.o
+RT_initialize.o : mod_RT_control.o
+RT_initialize.o : mod_RT_lifetimes.o
+RT_initialize.o : mod_RT_occupations.o
+# RT_initialize.o : @parallel_int@
+# RT_initialize.o : @parallel_m@
+# RT_initialize.o : @pars@
+# RT_initialize.o : @parser_m@
+# RT_initialize.o : @qp_ctl_m@
+# RT_initialize.o : @r_lattice@
+# RT_initialize.o : @stderr@
+# RT_initialize.o : @units@
+# RT_initialize.o : @vec_operate@
+# RT_initialize.o : @x_m@
+# RT_Integrator_init.o : @com@
+# RT_Integrator_init.o : @memory@
+RT_Integrator_init.o : mod_real_time.o
+# RT_Integrator_init.o : @pars@
+# RT_Integrator_init.o : @stderr@
+# RT_Integrator.o : @electrons@
+RT_Integrator.o : mod_fields.o
+RT_Integrator.o : mod_real_time.o
+RT_Integrator.o : mod_RT_control.o
+# RT_Integrator.o : @parallel_m@
+# RT_Integrator.o : @pars@
+# RT_Integrator.o : @r_lattice@
+# RT_Integrator.o : @timing_m@
+# RT_interpolation_doit_and_transfer.o : @electrons@
+# RT_interpolation_doit_and_transfer.o : @interpolate@
+RT_interpolation_doit_and_transfer.o : mod_real_time.o
+RT_interpolation_doit_and_transfer.o : mod_RT_control.o
+# RT_interpolation_doit_and_transfer.o : @pars@
+# RT_interpolation_doit_and_transfer.o : @r_lattice@
+# RT_interpolation_driver.o : @com@
+# RT_interpolation_driver.o : @drivers@
+# RT_interpolation_driver.o : @electrons@
+# RT_interpolation_driver.o : @interpolate@
+# RT_interpolation_driver.o : @memory@
+RT_interpolation_driver.o : mod_real_time.o
+# RT_interpolation_driver.o : @pars@
+# RT_interpolation_driver.o : @r_lattice@
+# RT_interpolation_driver.o : @units@
+# RT_INTERPOLATION_driver_seed.o : @electrons@
+# RT_INTERPOLATION_driver_seed.o : @interpolate@
+# RT_INTERPOLATION_driver_seed.o : @interpolate_tools@
+# RT_INTERPOLATION_driver_seed.o : @io_int@
+RT_INTERPOLATION_driver_seed.o : mod_real_time.o
+RT_INTERPOLATION_driver_seed.o : mod_RT_interpolate_tools.o
+# RT_INTERPOLATION_driver_seed.o : @pars@
+# RT_INTERPOLATION_driver_seed.o : @qp_m@
+# RT_INTERPOLATION_driver_seed.o : @r_lattice@
+RT_INV_step_accurate.o : mod_real_time.o
+# RT_INV_step_accurate.o : @pars@
+# RT_INV_step_accurate.o : @wrapper_omp@
+RT_INV_step_diago.o : mod_real_time.o
+# RT_INV_step_diago.o : @pars@
+# RT_INV_step_diago.o : @wrapper_omp@
+RT_INV_step_std.o : mod_real_time.o
+# RT_INV_step_std.o : @pars@
+# RT_INV_step_std.o : @wrapper_omp@
+RT_IO_type_time_steps.o : mod_real_time.o
+RT_IO_type_time_steps.o : mod_RT_control.o
+# RT_k_grid.o : @c_driver@
+# RT_k_grid.o : @drivers@
+# RT_k_grid.o : @electrons@
+# RT_k_grid.o : @memory@
+RT_k_grid.o : mod_real_time.o
+# RT_k_grid.o : @parallel_m@
+# RT_k_grid.o : @pars@
+# RT_k_grid.o : @r_lattice@
+RT_Lifetimes_merge_driver.o : mod_real_time.o
+RT_Lifetimes_merge_driver.o : mod_RT_lifetimes.o
+# RT_Lifetimes_merge_driver.o : @parallel_int@
+# RT_Lifetimes_merge_driver.o : @parallel_m@
+# RT_Lifetimes_merge_driver.o : @r_lattice@
+# RT_Lifetimes_merge_driver.o : @timing_m@
+RT_Lifetimes_merge_inter_k.o : mod_real_time.o
+RT_Lifetimes_merge_inter_k.o : mod_RT_lifetimes.o
+# RT_Lifetimes_merge_inter_k.o : @parallel_int@
+# RT_Lifetimes_merge_inter_k.o : @parallel_m@
+# RT_Lifetimes_merge_inter_k.o : @r_lattice@
+RT_Lifetimes_merge_intra_k.o : mod_real_time.o
+RT_Lifetimes_merge_intra_k.o : mod_RT_lifetimes.o
+# RT_Lifetimes_merge_intra_k.o : @parallel_int@
+# RT_Lifetimes_merge_intra_k.o : @parallel_m@
+# RT_Lifetimes_merge_intra_k.o : @r_lattice@
+# RT_mean_lifetimes_and_temperatures.o : @electrons@
+RT_mean_lifetimes_and_temperatures.o : mod_real_time.o
+RT_mean_lifetimes_and_temperatures.o : mod_RT_lifetimes.o
+RT_mean_lifetimes_and_temperatures.o : mod_RT_operations.o
+# RT_mean_lifetimes_and_temperatures.o : @parallel_int@
+# RT_mean_lifetimes_and_temperatures.o : @parallel_m@
+# RT_mean_lifetimes_and_temperatures.o : @pars@
+# RT_mean_lifetimes_and_temperatures.o : @units@
+RT_MEMORY_index.o : mod_real_time.o
+# RT_Observables.o : @electrons@
+RT_Observables.o : mod_fields.o
+RT_Observables.o : mod_real_time.o
+# RT_Observables.o : @pars@
+# RT_Observables.o : @r_lattice@
+# RT_Observables.o : @timing_m@
+# RT_occupations_and_levels_init.o : @electrons@
+# RT_occupations_and_levels_init.o : @functions@
+RT_occupations_and_levels_init.o : mod_real_time.o
+RT_occupations_and_levels_init.o : mod_RT_occupations.o
+# RT_occupations_and_levels_init.o : @parallel_int@
+# RT_occupations_and_levels_init.o : @parallel_m@
+# RT_occupations_and_levels_init.o : @pars@
+# RT_occupations_and_levels_init.o : @r_lattice@
+# RT_occupations_eval.o : @electrons@
+# RT_occupations_eval.o : @hamiltonian@
+RT_occupations_eval.o : mod_real_time.o
+RT_occupations_eval.o : mod_RT_occupations.o
+# RT_occupations_eval.o : @parallel_int@
+# RT_occupations_eval.o : @parallel_m@
+# RT_occupations_eval.o : @pars@
+# RT_occupations_FIT.o : @functions@
+RT_occupations_FIT.o : mod_real_time.o
+# RT_occupations_FIT.o : @pars@
+# RT_occupations_FIT.o : @timing_m@
+# RT_occupations_update.o : @electrons@
+RT_occupations_update.o : mod_real_time.o
+RT_occupations_update.o : mod_RT_occupations.o
+# RT_occupations_update.o : @parallel_int@
+# RT_occupations_update.o : @parallel_m@
+# RT_occupations_update.o : @r_lattice@
+# RT_output_and_IO_driver.o : @d_lattice@
+# RT_output_and_IO_driver.o : @electrons@
+# RT_output_and_IO_driver.o : @io_int@
+# RT_output_and_IO_driver.o : @io_m@
+RT_output_and_IO_driver.o : mod_real_time.o
+RT_output_and_IO_driver.o : mod_RT_control.o
+RT_output_and_IO_driver.o : mod_RT_lifetimes.o
+# RT_output_and_IO_driver.o : @pars@
+# RT_output_and_IO_driver.o : @r_lattice@
+# RT_output_and_IO_driver.o : @units@
+# RT_output_INIT.o : @c_driver@
+# RT_output_INIT.o : @com@
+# RT_output_INIT.o : @drivers@
+# RT_output_INIT.o : @electrons@
+RT_output_INIT.o : mod_RT_control.o
+RT_output_INIT.o : mod_RT_lifetimes.o
+RT_output_INIT.o : mod_RT_output.o
+# RT_output_INIT.o : @pars@
+# RT_output_INIT.o : @stderr@
+# RT_output_INIT.o : @timing_m@
+# RT_output.o : @c_driver@
+# RT_output.o : @com@
+# RT_output.o : @drivers@
+# RT_output.o : @electrons@
+# RT_output.o : @functions@
+# RT_output.o : @interfaces@
+RT_output.o : mod_fields.o
+RT_output.o : mod_real_time.o
+RT_output.o : mod_RT_control.o
+RT_output.o : mod_RT_lifetimes.o
+RT_output.o : mod_RT_output.o
+# RT_output.o : @pars@
+# RT_output.o : @qp_m@
+# RT_output.o : @r_lattice@
+# RT_output.o : @stderr@
+# RT_output.o : @timing_m@
+# RT_output.o : @units@
+# RT_propagate_fields.o : @electrons@
+RT_propagate_fields.o : mod_fields.o
+RT_propagate_fields.o : mod_real_time.o
+# RT_propagate_fields.o : @parallel_m@
+# RT_propagate_fields.o : @pars@
+# RT_propagate_fields.o : @r_lattice@
+# RT_propagate_fields.o : @units@
+# RT_propagate_fields.o : @x_m@
+# RT_Rabi_frequency_ALL_and_print.o : @dipoles@
+# RT_Rabi_frequency_ALL_and_print.o : @electrons@
+RT_Rabi_frequency_ALL_and_print.o : mod_fields.o
+RT_Rabi_frequency_ALL_and_print.o : mod_real_time.o
+# RT_Rabi_frequency_ALL_and_print.o : @output@
+# RT_Rabi_frequency_ALL_and_print.o : @parallel_m@
+# RT_Rabi_frequency_ALL_and_print.o : @pars@
+# RT_Rabi_frequency_ALL_and_print.o : @r_lattice@
+# RT_Rabi_frequency_ALL_and_print.o : @units@
+# RT_Rabi_frequency_ALL_and_print.o : @vec_operate@
+# RT_Rabi_frequency_ALL_and_print.o : @x_m@
+# RT_Rabi_frequency.o : @com@
+# RT_Rabi_frequency.o : @dipoles@
+# RT_Rabi_frequency.o : @electrons@
+RT_Rabi_frequency.o : mod_fields.o
+RT_Rabi_frequency.o : mod_real_time.o
+# RT_Rabi_frequency.o : @parallel_m@
+# RT_Rabi_frequency.o : @pars@
+# RT_Rabi_frequency.o : @r_lattice@
+# RT_Rabi_frequency.o : @units@
+# RT_Rabi_frequency.o : @vec_operate@
+# RT_Rabi_frequency.o : @x_m@
+# RT_RESTART_database_copy.o : @com@
+# RT_RESTART_database_copy.o : @io_m@
+RT_RESTART_database_copy.o : mod_RT_control.o
+# RT_RESTART_database_copy.o : @parallel_m@
+# RT_RESTART_database_copy.o : @pars@
+# RT_RESTART_database_copy.o : @stderr@
+# RT_Scattering_step.o : @electrons@
+RT_Scattering_step.o : mod_real_time.o
+RT_Scattering_step.o : mod_RT_occupations.o
+RT_Scattering_step.o : mod_RT_operations.o
+# RT_Scattering_step.o : @pars@
+# RT_small_a.o : @functions@
+RT_small_a.o : mod_fields.o
+# RT_small_a.o : @pars@
+# RT_small_a.o : @stderr@
+# RT_small_a.o : @units@
+# RT_small_a.o : @wrapper@
+# RT_small_a.o : @x_m@
+# RT_start_and_restart.o : @com@
+# RT_start_and_restart.o : @descriptors@
+# RT_start_and_restart.o : @drivers@
+# RT_start_and_restart.o : @electrons@
+# RT_start_and_restart.o : @hamiltonian@
+# RT_start_and_restart.o : @h_interfaces@
+# RT_start_and_restart.o : @io_int@
+# RT_start_and_restart.o : @io_m@
+# RT_start_and_restart.o : @memory@
+RT_start_and_restart.o : mod_fields.o
+RT_start_and_restart.o : mod_real_time.o
+RT_start_and_restart.o : mod_RT_control.o
+RT_start_and_restart.o : mod_RT_lifetimes.o
+RT_start_and_restart.o : mod_RT_output.o
+# RT_start_and_restart.o : @parallel_int@
+# RT_start_and_restart.o : @parallel_m@
+# RT_start_and_restart.o : @pars@
+# RT_start_and_restart.o : @qp_ctl_m@
+# RT_start_and_restart.o : @r_lattice@
+# RT_start_and_restart.o : @units@
+# RT_start_and_restart.o : @wave_func@
+# RT_start_and_restart.o : @xc_functionals@
+# RT_time_step_update.o : @com@
+# RT_time_step_update.o : @electrons@
+# RT_time_step_update.o : @interfaces@
+# RT_time_step_update.o : @io_int@
+RT_time_step_update.o : mod_real_time.o
+RT_time_step_update.o : mod_RT_control.o
+RT_time_step_update.o : mod_RT_lifetimes.o
+RT_time_step_update.o : mod_RT_output.o
+# RT_time_step_update.o : @parallel_int@
+# RT_time_step_update.o : @parallel_m@
+# RT_time_step_update.o : @pars@
+# RT_time_step_update.o : @stderr@
+# RT_time_step_update.o : @units@
+# RT_update_TIME_CONF_descriptions.o : @descriptors@
+RT_update_TIME_CONF_descriptions.o : mod_real_time.o
+RT_update_TIME_CONF_descriptions.o : mod_RT_control.o
+RT_update_TIME_CONF_descriptions.o : mod_RT_lifetimes.o
+RT_update_TIME_CONF_descriptions.o : mod_RT_output.o
+# RT_update_TIME_CONF_descriptions.o : @stderr@
+# RT_update_TIME_CONF_descriptions.o : @units@
+# WF_derivative.o : @d_lattice@
+# WF_derivative.o : @electrons@
+# WF_derivative.o : @fft_m@
+# WF_derivative.o : @interfaces@
+# WF_derivative.o : @live_t@
+# WF_derivative.o : @memory@
+# WF_derivative.o : @pars@
+# WF_derivative.o : @r_lattice@
+# WF_derivative.o : @stderr@
+# WF_derivative.o : @wave_func@

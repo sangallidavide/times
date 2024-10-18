@@ -1,0 +1,14 @@
+objs=\
+io_COLLISIONS.o \
+io_COLLISIONS_header.o \
+COLLISIONS_dbname.o \
+io_KB_real_space.o \
+variables_RT_static.o \
+variables_RT_dynamic.o \
+io_RT_components.o \
+io_RT_components_header.o \
+io_RT_components_Reference.o \
+io_RT_components_V_bands.o \
+io_RT_components_G_lesser.o \
+io_RT_components_OBS.o \
+io_RT_components_TIME_points.o
