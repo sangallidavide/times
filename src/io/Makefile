@@ -8,12 +8,11 @@ include $(REF_YDIR)/config/mk/local/static_variables.mk
 #precomp_flags  = -D_HDF5_LIB -D_HDF5_IO -D_PAR_IO -D_MPI -D_FFTW -D_SLEPC -D_SCALAPACK -D_OPENMP -D_TIMING -D_$(os)
 dopts  = -D_RT $(precomp_flags)
 
-
 exatto_libdir=../../lib
 exatto_incdir=../../include
 
 srcdir=../../
-folder="src/collisions"
+folder="src/io"
 IFLAG=-I
 
 idriver=$(IFLAG)$(libdir)/yambo/Ydriver/include $(IFLAG)$(includedir)/driver $(IFLAG)$(includedir)/version
@@ -41,6 +40,7 @@ lf90libinclude=$(iiotk) $(inetcdff) $(inetcdf) $(ipetsc) $(islepc) $(ihdf5) $(il
 	@(eval $(cc) $(cflags) $(dopts) $(linclude) -c $(srcdir)$(folder)/$*.c) > /dev/null
 	@echo -n $*".c"
 
+
 # QE version
 #
 #.f90.o:
@@ -50,36 +50,18 @@ lf90libinclude=$(iiotk) $(inetcdff) $(inetcdf) $(ipetsc) $(islepc) $(ihdf5) $(il
 
 #========================
 
-target=lib_collisions.a
-
+target=lib_io.a
 objs=\
-mod_collision_ext.o \
-mod_COLL_interfaces.o \
-COLLISIONS_compose_rt.o \
-COLLISIONS_compose_nl.o \
-COLLISIONS_basic_operations.o \
-Build_LSEX_collisions.o \
-SCATTERING_QED_transverse_matrix.o \
-SCATTERING_GW_kinematics.o \
-PLASMA_tables_and_dimensions.o \
-PLASMA_parallel_setup.o \
-PLASMA_build_up.o \
-OSCLL_load.o \
-OSCLL_eval.o \
-OSCLL_compose_vbands.o \
-OSCLL_compose_nl.o \
-OSCLL_compose_collision.o \
-LSEX_potential.o \
-COLLISIONS_NEQ_GW_static.o \
-COLLISIONS_momentum.o \
-COLLISIONS_map_to_QP_table.o \
-COLLISIONS_load.o \
-COLLISIONS_linearize_and_IO.o \
-COLLISIONS_HXC.o \
-COLLISIONS_eval.o \
-COLLISIONS_compress.o \
-COLLISIONS_compose_sc.o \
-COLLISIONS_alloc_and_free.o
+io_COLLISIONS.o \
+io_COLLISIONS_header.o \
+io_RT_components.o \
+io_RT_components_header.o \
+io_RT_components_Reference.o \
+io_RT_components_V_bands.o \
+io_RT_components_G_lesser.o \
+io_RT_components_OBS.o \
+io_RT_components_TIME_points.o
+
 
 all: $(target)
 
@@ -93,8 +75,10 @@ all: $(target)
 #
 $(target): $(objs)
 	eval $(ar) $(arflags) $(target) $(objs)
+	echo $(target)   
 	mv $(target) $(exatto_libdir) ; chmod u+x $(exatto_libdir)/$(target)
-	if test -e collision_ext.mod ; then  mv *.mod $(exatto_incdir); fi
+	#if test -e hamiltonian.mod ; then  mv *.mod $(exatto_incdir); fi
+
 
  
 clean:

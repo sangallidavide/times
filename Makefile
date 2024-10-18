@@ -20,6 +20,7 @@ all: lumen exatto floquet
 exatto:
 	+$(MAKE) -C src/collisions
 	+$(MAKE) -C src/hamiltonian
+	+$(MAKE) -C src/io
 	+$(MAKE) -C src/exatto
 #	cd src/exatto ; make exatto
 
@@ -39,6 +40,7 @@ clean:
 	cd src/exatto       ; make clean
 	cd src/collisions   ; make clean
 	cd src/hamiltonian  ; make clean
+	cd src/io           ; make clean
 	#cd src/lumen    ; make clean
 	#cd src/floquet  ; make clean
 	-rm -rf ./bin/*.x
