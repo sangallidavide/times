@@ -61,7 +61,7 @@ struct yambo_seed_struct command_line(int argc, char *argv[], struct options_str
  /* 
    Number of active options
  */
- n_active=-1;
+ n_active=0;
  for(i_opt=0;i_opt<n_options;i_opt++) {
   if (opts[i_opt].short_opt==0) {break;}; 
   n_active++;
